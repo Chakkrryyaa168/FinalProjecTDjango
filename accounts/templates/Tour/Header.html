@@ -1,0 +1,40 @@
+{% load static %}
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'indexTour' %}" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">Tour</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'indexTour' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'destinations' %}">Destinations</a></li>
+          <li><a href="{% url 'tours' %}">Tours</a></li>
+          <li><a href="{% url 'gallery' %}">Gallery</a></li>
+          <li><a href="{% url 'blog' %}">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="{% url 'destination_details' %}">Destination Details</a></li>
+              <li><a href="{% url 'tour_details' %}">Tour Details</a></li>
+              <li><a href="{% url 'booking' %}" class="active">Booking</a></li>
+              <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+              <li><a href="{% url 'faq' %}">Frequently Asked Questions</a></li>
+              <li><a href="{% url 'blog_details' %}">Blog Details</a></li>
+              <li><a href="{% url 'terms' %}">Terms</a></li>
+              <li><a href="{% url 'privacy' %}">Privacy</a></li>
+              <li><a href="{% url 'error_404' %}">404</a></li>
+            </ul>
+          </li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="destiantios.html">Get Started</a>
+
+    </div>
+  </header>
