@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
@@ -27,4 +27,6 @@ urlpatterns = [
     path('terms/', views.terms, name='terms'),
     path('privacy/', views.privacy, name='privacy'),
     path('404/', views.error_404, name='error_404'),
+    path("ckeditor/", include("ckeditor_uploader.urls")),
+
 ]

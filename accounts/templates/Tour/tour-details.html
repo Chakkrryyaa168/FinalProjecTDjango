@@ -15,6 +15,14 @@
   <main class="main">
 
     <!-- Page Title -->
+     {% for DTproduct in DTproduct %}
+     {{DTproduct.id}}
+     {{DTproduct.productName}}
+     {{DTproduct.price}}
+     {{DTproduct.description}}
+     {{DTproduct.category}}
+     {{DTproduct.image}}
+     {% endfor %}
     <div class="page-title dark-background" data-aos="fade" style="background-image: url({% static 'img/travel/Anggg.webp' %});">
       <div class="container position-relative">
         <h1>Tour Details</h1>

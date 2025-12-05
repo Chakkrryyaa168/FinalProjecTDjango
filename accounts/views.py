@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Product
 # Create your views here.
 
 # Views currently used in your urls.py (kept as-is for now)
@@ -15,7 +16,11 @@ def customer(request):
 
 # Existing views that render templates
 def index(request):     
-    return render(request, 'Tour/index.html')
+    DTproduct = Product.objects.all()
+    context = {
+        'DTproduct': DTproduct
+        }
+    return render(request, 'Tour/index.html', context)
 
 def indexTour(request):
     return render(request, 'Tour/index.html')

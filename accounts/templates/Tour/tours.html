@@ -13,6 +13,14 @@
   {% comment %} Header {% endcomment %}
 
   <main class="main">
+    {% for DTproduct in DTproduct %}
+     {{DTproduct.id}}
+     {{DTproduct.productName}}
+     {{DTproduct.price}}
+     {{DTproduct.description}}
+     {{DTproduct.category}}
+     {{DTproduct.image}}
+    {% endfor %}
 
     <!-- Page Title -->
     <div class="page-title dark-background" data-aos="fade" style="background-image: url({% static 'img/travel/Anggg.webp' %});">
@@ -214,7 +222,7 @@
                       <p>Experience rainforest canopy tours, wildlife viewing, and pristine beaches in this eco paradise.</p>
                       <div class="tour-meta">
                         <span class="duration"><i class="bi bi-clock"></i> 6 Days</span>
-                        <span class="price">From $789</span>
+                        <span class="price">From $189</span>
                       </div>
                       <a href="tour-details.html" class="btn btn-primary">View Details</a>
                     </div>

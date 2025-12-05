@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Customer, Destination, Hotel, Room, Booking
+from .models import Customer, Destination, Hotel, Product, ProductDetail, ProductDetailImage, Room, Booking
 
 @admin.register(Customer)
 class CustomerAdmin(admin.ModelAdmin):
@@ -33,3 +33,7 @@ class BookingAdmin(admin.ModelAdmin):
     list_display = ("customer", "room", "check_in", "check_out", "status", "created_at")
     list_filter = ("status", "created_at", "check_in")
     search_fields = ("customer__name",)
+
+admin.site.register(Product)
+admin.site.register(ProductDetail)
+admin.site.register(ProductDetailImage)
